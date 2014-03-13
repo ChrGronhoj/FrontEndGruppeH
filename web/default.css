@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, Tahoma, sans-serif;
+    background: #F3E2A9;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    color: dodgerblue;    
+    }
+    
+h1 b {
+    font-size: 300%;    
+    }
+
+.Abstract {
+    font-style: italic;
+    font-size: 150%;
+    font-family: Times New Roman, serif;
+    }
+
+.Color1 {
+    color: dodgerblue;   
+    }
