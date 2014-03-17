@@ -21,12 +21,8 @@
         <h1>Account list page</h1>
         Welcome to the account list page
         <hr/>
-        ${message} ${accounts.size()}
-       
-        <%
-    String customerID = request.getParameter("customerID");
-   session.setAttribute( "customerID", customerID );
-%>
+       <form action="Controller" method="POST">
+            <button name="command" value="create-account">Create Account</button>
         <table border="1" style="width:400px">
             <c:forEach var="accounts" items="${accounts}">
                 <tr>
@@ -34,7 +30,10 @@
                         <a href='Controller?command=show-account-details&accountNumber=${accounts.number}'>${accounts.number}</a>
                     </td>
                     <td>
-                        ${accounts.type} 
+                        ${accounts.getBalance()} 
+                    </td>
+                    <td>
+                        ${accounts.getType()} 
                     </td>
                     <td>
                         <a href="Controller?command=prepare-transfer&accountNumber=${accounts.number}">Transfer money</a>
@@ -43,7 +42,6 @@
             </c:forEach>
         </table>
         <hr/> 
-        <form action="Controller" method="POST">
             <button name="command" value="main">Back to Main</button>
         </form>
     </body>

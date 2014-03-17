@@ -6,26 +6,24 @@ import dk.cphbusiness.bank.contract.dto.CustomerIdentifier;
 import factory.Factory;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
-public class ListAccountsCommand extends TargetCommand {
 
-    public ListAccountsCommand(String target) {
+class CancelCreateAccountCommand extends TargetCommand{
+
+    public CancelCreateAccountCommand(String target) {
         super(target);
     }
-
-    @Override
+    
+     @Override
     public String execute(HttpServletRequest request) {
-        String customerID = request.getParameter("customerID");
+
+        String customerID = (String)request.getSession().getAttribute("customerID");
         BankManager manager = Factory.getInstance().getManager();
         CustomerIdentifier customer = CustomerIdentifier.fromString(customerID);
         Collection<AccountSummary> accounts = manager.listCustomerAccounts(customer);
-        
+
         request.setAttribute("accounts", accounts);
-        HttpSession session = request.getSession();
-        session.setAttribute("customerID", customerID);
 
         return super.execute(request);
     }
-
 }

@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+    <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,5 +26,6 @@
         <ul>
             From here you can navigate to:
             <li><a href="Controller?command=list-customers">Customer list page</a></li>
+            <li><a href="Controller?command=create-customer">Create customer</a></li>
     </body>
 </html>

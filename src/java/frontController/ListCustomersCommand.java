@@ -1,23 +1,24 @@
 package frontController;
 
+import dk.cphbusiness.bank.contract.BankManager;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import dk.cphbusiness.bank.contract.dto.CustomerSummary;
-import javax.servlet.http.HttpSession;
+import factory.Factory;
 
 public class ListCustomersCommand extends TargetCommand {
 
-  public ListCustomersCommand(String target) {
-    super(target);
-  }
+    public ListCustomersCommand(String target) {
+        super(target);
+    }
 
-  @Override
-  public String execute(HttpServletRequest request) {
-    Collection<CustomerSummary> customers = factory.Factory.getInstance().getManager().listCustomers();
-    
-    
-    request.setAttribute("customers", customers);
+    @Override
+    public String execute(HttpServletRequest request) {
+        BankManager manager = Factory.getInstance().getManager();
+        Collection<CustomerSummary> customers = manager.listCustomers();
 
-    return super.execute(request); 
-  }
+        request.setAttribute("customers", customers);
+
+        return super.execute(request);
+    }
 }

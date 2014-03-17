@@ -36,7 +36,7 @@
                 </tr>
                 <tr class="ButtonRow">
                     <td colspan="2">
-                        <button type="submit" name="command" value="list-customer-accounts">Cancel</button>
+                        <button type="submit" name="command" value="cancel-transfer">Cancel</button>
                         <button type="submit" name="command" value="transfer-amount">Transfer</button>
                     </td>
                 </tr>
