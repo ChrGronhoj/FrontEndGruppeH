@@ -16,7 +16,7 @@
         <hr>
         <h2>ヽ༼ຈل͜ຈ༽ﾉ Welcome to GronPo Bank's main page ヽ༼ຈل͜ຈ༽ﾉ</h2>
         <h3><b><i>ヽ༼ຈل͜ຈ༽ﾉ GronPo Bank - We raise our dongers ヽ༼ຈل͜ຈ༽ﾉ</i></b></h3>
-        <h4>GITTEST  YEAH DU ER FRÆK GITTE</h4>
+        <h4>Git-test 3, Christian 18/3/2014 </h4>
         <p>"It is definitely the best bank ever" - <i>Unbiased anonymous person</i></p><br>
         <br>
         <p><i>Welcome to GronPo Bank's homepage. We have a bit of history with professional
